@@ -25,7 +25,6 @@ jobs:
 
       - name: "Install Pandoc dependencies"
         run: |
-          curl -sSL https://get.haskellstack.org/ | sh
           stack install pandoc pandoc-sidenote
 
       - name: "Build Doc"
