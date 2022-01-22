@@ -19,8 +19,7 @@ jobs:
 
       - name: "Install Pandoc dependencies"
         run: |
-          sudo apt-get install -y pandoc git 
-          curl -sSL https://get.haskellstack.org/ | sh
+          sudo apt-get install -y pandoc git
           git clone https://github.com/jez/pandoc-sidenote
           cd pandoc-sidenote
           stack build
