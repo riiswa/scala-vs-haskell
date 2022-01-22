@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - src/
+      - public/
+      - tools/
+      - .github/
 
 jobs:
 
@@ -19,11 +24,8 @@ jobs:
 
       - name: "Install Pandoc dependencies"
         run: |
-          sudo apt-get install -y pandoc git
-          git clone https://github.com/jez/pandoc-sidenote
-          cd pandoc-sidenote
-          stack build
-          stack install
+          curl -sSL https://get.haskellstack.org/ | sh
+          stack install pandoc pandoc-sidenote
 
       - name: "Build Doc"
         run: make
