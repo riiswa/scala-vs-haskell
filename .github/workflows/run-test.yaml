@@ -6,10 +6,10 @@ on:
     branches:
       - main
     paths:
-      - src/
-      - public/
-      - tools/
-      - .github/
+      - 'src/**'
+      - 'public/**'
+      - 'tools/**'
+      - '.github/**'
 
 jobs:
 
